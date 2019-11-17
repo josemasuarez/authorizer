@@ -1,4 +1,6 @@
 
+## Authorizer
+
 Authorizer is a standalone application which allows to the user operates with his bank account. 
 
 It handle two operations types:
