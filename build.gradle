@@ -15,7 +15,7 @@ plugins {
 group 'com.nu.test'
 version '1.0-SNAPSHOT'
 
-mainClassName = 'com.nubank.challenge.domain.Application'
+mainClassName = 'com.naranjax.poc.Application'
 
 sourceCompatibility = 11
 targetCompatibility = 11
@@ -28,17 +28,15 @@ bootJar {
     archiveFileName = 'authorizer.jar'
 }
 
-run{
-    standardInput = System.in
-}
 
 test {
     useJUnitPlatform()
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testImplementation "org.junit.jupiter:junit-jupiter-params:5.3.1"
     testImplementation "org.mockito:mockito-junit-jupiter:2.23.0"
